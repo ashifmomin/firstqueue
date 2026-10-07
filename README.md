@@ -2,7 +2,7 @@
 
 **A self-hosted job alert bot. It checks LinkedIn on a schedule, filters out everything irrelevant, and sends only the jobs worth your attention to Telegram — usually within hours of posting.**
 
-Built because job boards are noisy: searching "IT Support, Qatar" returns sales roles, recruiter spam, jobs posted three weeks ago, and the same posting four times. FirstQueue does that filtering for you, on a timer, and messages you when something real shows up.
+Built because job searches are noisy: searching "IT Support, Qatar" returns sales roles, recruiter spam, jobs posted three weeks ago, and the same posting four times.
 
 Default configuration targets **IT support roles in Qatar and Saudi Arabia**, because that's what it was built for. It's designed to be retargeted — see [docs/CUSTOMIZATION.md](docs/CUSTOMIZATION.md).
 
