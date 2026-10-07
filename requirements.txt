@@ -1,0 +1,3 @@
+# Tested production dependencies for the LinkedIn-only bot.
+requests==2.33.0
+apify-client==1.7.1

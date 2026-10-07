@@ -1,0 +1,4 @@
+# OPTIONAL: enables real embedding-based semantic scoring.
+# The core bot does NOT require this file.
+# Verify ARM/Python 3.10+ wheel availability on the target VPS before installing.
+sentence-transformers==2.2.2

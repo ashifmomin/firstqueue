@@ -1,0 +1,63 @@
+# ---------------------------------------------------------------------------
+# Secrets — never commit these
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# ---------------------------------------------------------------------------
+# Runtime data — contains your personal job history and search activity
+# ---------------------------------------------------------------------------
+jobs.db
+jobs.db-wal
+jobs.db-shm
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Logs — can contain job titles, company names and URLs
+bot.log
+bot.log.*
+*.log
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Downloaded embedding models (optional feature)
+.cache/
+models/
+
+# ---------------------------------------------------------------------------
+# Editors / OS
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
