@@ -1,0 +1,17 @@
+[Unit]
+Description=FirstQueue job alert bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+
+# Replace YOUR_LINUX_USERNAME with the Linux account that owns the FirstQueue install.
+# Keep the .env file readable only by that account (chmod 600 .env).
+User=YOUR_LINUX_USERNAME
+WorkingDirectory=/home/YOUR_LINUX_USERNAME/firstqueue
+EnvironmentFile=/home/YOUR_LINUX_USERNAME/firstqueue/.env
+ExecStart=/home/YOUR_LINUX_USERNAME/firstqueue/venv/bin/python3 /home/YOUR_LINUX_USERNAME/firstqueue/main.py
+
+[Install]
+WantedBy=multi-user.target

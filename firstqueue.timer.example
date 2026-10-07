@@ -1,0 +1,25 @@
+[Unit]
+Description=Run FirstQueue on the configured working-day schedule
+
+[Timer]
+# TIMES ARE UTC. They must match SCHEDULE_HOURS in config.py, which is
+# expressed in SCHEDULE_TZ. If the two disagree, every run exits immediately
+# with the schedule guard message.
+#
+# Default: 06/09/12/15 UTC = 09:00/12:00/15:00/18:00 Gulf time (UTC+3),
+# Sunday to Thursday — the Gulf working week.
+#
+# Change this line if you change SCHEDULE_HOURS or SCHEDULE_TZ.
+OnCalendar=Sun,Mon,Tue,Wed,Thu 06,09,12,15:00:00 UTC
+
+# Attempt a missed run after a reboot. The bot's own schedule guard prevents
+# an unscheduled catch-up run from making a paid API call.
+Persistent=true
+
+# Spread the start by up to 60s so runs don't all land on the exact second.
+RandomizedDelaySec=60
+
+Unit=firstqueue.service
+
+[Install]
+WantedBy=timers.target
